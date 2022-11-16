@@ -1,6 +1,6 @@
 package demo
 
-import "gotools/utils/excel"
+import "github.com/dongzhouzhoudz/gotools/utils/excel"
 
 type OutPutData struct {
 	NameTitle    string `type:"title" title_column:"A1-C3" title_value:"姓名"`
