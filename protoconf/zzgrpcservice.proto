@@ -1,0 +1,28 @@
+syntax = "proto3";
+option go_package = "zz.go.project;protoservice";
+package protoservice;
+
+service RemoteCall{
+
+  //Grpc 单一模式一次请求返回一个对象
+  rpc GrpcRemoteFunctionCall (RequestSend) returns (ResponseReceive) {}
+
+  //Grpc 服务端流模式一次请求返回多个流对象
+  rpc ServerStreamGrpcRemoteFunctionCall (RequestSend) returns (stream ResponseReceive) {}
+
+
+}
+
+
+message RequestSend {
+  string structName = 1;
+  string methodName = 2;
+  bytes  reqParams = 3;
+}
+
+
+message ResponseReceive{
+  sint32 code = 1;
+  string message = 2;
+  bytes data = 3;
+}
