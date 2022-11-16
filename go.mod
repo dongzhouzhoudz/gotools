@@ -1,4 +1,4 @@
-module gotools
+module github.com/dongzhouzhoudz/gotools
 
 go 1.19
 
