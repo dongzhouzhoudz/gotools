@@ -113,5 +113,8 @@ excel.SaveExcelFromStructListWithStyle("~/Download/test.xlsx", "TestSheet", appe
 
 ```
 
+#### Tips
+实际打印的数据队列支持多种类型结构体，在结构体配置过程中请注意不要有单元格区域交叉的情况否则会导致导出数据错乱
+
 
 
